@@ -10,7 +10,7 @@ static size_t	ft_arr_of_strlen(char **arr_of_str)
 	return (len);
 }
 
-char	**ft_arr_of_strjoin(char const **s1, char const **s2)
+char	**ft_arr_of_strjoin(char **s1, char **s2)
 {
 	char	**joined;
 	size_t	s1_len;
@@ -30,5 +30,7 @@ char	**ft_arr_of_strjoin(char const **s1, char const **s2)
 	joined[s1_len + s2_len] = NULL;
 	ft_memcpy(joined, s1, sizeof(char *) * s1_len);
 	ft_memcpy(joined + s1_len, s2, sizeof(char *) * s2_len);
+	free(s1);
+	free(s2);
 	return (joined);
 }

@@ -27,7 +27,6 @@ int main(int ac, char **av)
 {
 	int		i;
 	char	**arg;
-	char	**temp;
 	char	**inputs;
 
 	inputs = NULL;
@@ -37,12 +36,9 @@ int main(int ac, char **av)
 		arg = ft_split(av[i], ' ');
 		if (!arg)
 			return (free_it(NULL, inputs, 1));
-		temp = ft_arr_of_strjoin(inputs, arg);
-		if (!temp)
+		inputs = ft_arr_of_strjoin(inputs, arg);
+		if (!inputs)
 			return (free_it(arg, inputs, 1));
-		free(arg);
-		free(inputs);
-		inputs = temp;
 		i++;
 	}
 	free_it(NULL, inputs, 0);
