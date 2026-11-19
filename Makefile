@@ -8,7 +8,7 @@ SRCS =
 
 OBJS = $(SRCS:.c=.o)
 
-HEADER = push_swap.h
+HEADER = ft_push_swap.h
 
 all: $(NAME)
 

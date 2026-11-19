@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_push_swap.h"
+#include "ft_push_swap.h"
 
 static int	intlen(uintptr_t n)
 {

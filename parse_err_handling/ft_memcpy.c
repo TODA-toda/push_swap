@@ -1,4 +1,4 @@
-#include "libft_push_swap.h"
+#include "ft_push_swap.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

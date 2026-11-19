@@ -1,4 +1,4 @@
-#include "libft_push_swap.h"
+#include "ft_push_swap.h"
 
 static size_t	count_word(char const *s, char c)
 {

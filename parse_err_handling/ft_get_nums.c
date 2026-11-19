@@ -1,4 +1,4 @@
-#include "libft_push_swap.h"
+#include "ft_push_swap.h"
 
 static int	check_dup(int *nums, int size)
 {

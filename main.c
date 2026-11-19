@@ -1,4 +1,4 @@
-#include "libft_push_swap.h"
+#include "ft_push_swap.h"
 
 static int	free_it(char **arg, char **inputs, int print_err)
 {

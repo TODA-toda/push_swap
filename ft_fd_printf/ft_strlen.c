@@ -6,11 +6,11 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 13:27:01 by souait-s          #+#    #+#             */
-/*   Updated: 2026/11/17 21:16:25 by marvin           ###   ########.fr       */
+/*   Updated: 2026/11/18 23:42:51 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_push_swap.h"
+#include "ft_push_swap.h"
 
 size_t	ft_strlen(const char *s)
 {

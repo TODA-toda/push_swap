@@ -6,11 +6,11 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 16:36:06 by souait-s          #+#    #+#             */
-/*   Updated: 2026/11/18 22:36:53 by marvin           ###   ########.fr       */
+/*   Updated: 2026/11/18 23:43:02 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_push_swap.h"
+#include "ft_push_swap.h"
 
 int	ft_atoi(const char *nptr)
 {

@@ -1,5 +1,5 @@
-#ifndef LIBFT_PUSH_SWAP_H
-# define LIBFT_PUSH_SWAP_H
+#ifndef FT_PUSH_SWAP_H
+# define FT_PUSH_SWAP_H
 
 #include <unistd.h>
 #include <stddef.h>
@@ -15,6 +15,14 @@ typedef enum e_strategy
 	MEDIUM,
 	COMPLEX
 }	t_strategy;
+
+typedef struct s_stack
+{
+	int	*data;
+	int	cap;
+	int size;
+	int	head;
+}	t_stack;
 
 int		ft_printf(int fd, const char *format, ...);
 int		ft_print_percent(int fd, va_list args);
@@ -36,5 +44,7 @@ int		push_swap(int *nums, int size, t_strategy strategy, int bench);
 int		ft_atoi(const char *nptr);
 int		*ft_get_nums(char **inputs, int start, int *size);
 int		ft_isdigit(int c);
+int		indexer(t_stack *stack_x, int i);
+void	sa(t_stack *stack_a);
 
 #endif
