@@ -1,11 +1,11 @@
 #ifndef FT_PUSH_SWAP_H
 # define FT_PUSH_SWAP_H
 
-#include <unistd.h>
-#include <stddef.h>
-#include <stdarg.h>
-#include <stdlib.h>
-#include <stdint.h>
+# include <unistd.h>
+# include <stddef.h>
+# include <stdarg.h>
+# include <stdlib.h>
+# include <stdint.h>
 
 typedef enum e_strategy
 {
@@ -20,7 +20,7 @@ typedef struct s_stack
 {
 	int	*data;
 	int	cap;
-	int size;
+	int	size;
 	int	head;
 }	t_stack;
 
@@ -36,15 +36,25 @@ int		ft_print_hex(int fd, va_list args);
 char	*ft_itoa(int n);
 void	*ft_memchr(const void *s, int c, size_t n);
 size_t	ft_strlen(const char *s);
-char	**ft_arr_of_strjoin(char const **s1, char const **s2);
+char	**ft_arr_of_strjoin(char **s1, char **s2);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 char	**ft_split(char const *s, char c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-int		push_swap(int *nums, int size, t_strategy strategy, int bench);
+int		ft_push_swap(int *nums, int size, t_strategy strategy, int bench);
 int		ft_atoi(const char *nptr);
 int		*ft_get_nums(char **inputs, int start, int *size);
 int		ft_isdigit(int c);
 int		indexer(t_stack *stack_x, int i);
 void	sa(t_stack *stack_a);
+void	sb(t_stack *stack_b);
+void	ss(t_stack *stack_a, t_stack *stack_b);
+void	pa(t_stack *stack_a, t_stack *stack_b);
+void	pb(t_stack *stack_a, t_stack *stack_b);
+void	ra(t_stack *stack_a);
+void	rb(t_stack *stack_b);
+void	rr(t_stack *stack_a, t_stack *stack_b);
+void	rra(t_stack *stack_a);
+void	rrb(t_stack *stack_b);
+void	rrr(t_stack *stack_a, t_stack *stack_b);
 
 #endif

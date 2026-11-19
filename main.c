@@ -13,7 +13,7 @@ static int	free_it(char **arg, char **inputs, int print_err)
 	}
 	i = 0;
 	if (inputs)
-	{	
+	{
 		while (inputs[i])
 			free(inputs[i++]);
 		free(inputs);
@@ -85,7 +85,7 @@ static int	get_flags(char **inputs, t_strategy *strategy, int *bench)
 	return (i);
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	int			start_size;
 	char		**inputs;
@@ -105,7 +105,7 @@ int main(int ac, char **av)
 	free_it(NULL, inputs, 0);
 	if (!nums)
 		return (free_it(NULL, NULL, 1));
-	if (!push_swap(nums, start_size, strategy, bench))
+	if (!ft_push_swap(nums, start_size, strategy, bench))
 		return (free_it(NULL, NULL, 1));
 	return (0);
 }

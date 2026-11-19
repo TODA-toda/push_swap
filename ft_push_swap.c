@@ -1,6 +1,7 @@
 #include "ft_push_swap.h"
 
-static int	initial_stacks(t_stack *stack_a, t_stack *stack_b, int *nums, int size)
+static int	initial_stacks(t_stack *stack_a, t_stack *stack_b, int *nums,
+		int size)
 {
 	stack_a->data = nums;
 	stack_a->cap = size;
@@ -20,7 +21,7 @@ int	indexer(t_stack *stack_x, int i)
 	return ((stack_x->head + i) % stack_x->cap);
 }
 
-int	push_swap(int *nums, int size, t_strategy strategy, int bench)
+int	ft_push_swap(int *nums, int size, t_strategy strategy, int bench)
 {
 	t_stack	stack_a;
 	t_stack	stack_b;
@@ -30,6 +31,7 @@ int	push_swap(int *nums, int size, t_strategy strategy, int bench)
 		free(stack_a.data);
 		return (0);
 	}
-
+	free(stack_a.data);
+	free(stack_b.data);
 	return (1);
 }

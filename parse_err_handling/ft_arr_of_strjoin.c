@@ -13,7 +13,7 @@ static void	*free_it(char **s1, char **s2, int print_err)
 	}
 	i = 0;
 	if (s2)
-	{	
+	{
 		while (s2[i])
 			free(s2[i++]);
 		free(s2);
