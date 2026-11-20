@@ -22,6 +22,8 @@ void	rb(t_stack *stack_b)
 
 void	rr(t_stack *stack_a, t_stack *stack_b)
 {
+	if (stack_a->size < 2 && stack_b->size < 2)
+		return ;
 	if (stack_a->size >= 2)
 	{
 		stack_a->data[indexer(stack_a, stack_a->size)]
@@ -34,6 +36,5 @@ void	rr(t_stack *stack_a, t_stack *stack_b)
 			= stack_b->data[indexer(stack_b, 0)];
 		stack_b->head = (stack_b->head + 1) % stack_b->cap;
 	}
-	if (stack_a->size >= 2 || stack_b->size >= 2)
-		ft_printf(1, "rr\n");
+	ft_printf(1, "rr\n");
 }

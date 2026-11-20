@@ -12,10 +12,9 @@ SRCS = main.c ft_push_swap.c \
 	   printf/ft_print_uinteger.c printf/ft_print_upphex.c \
 	   printf/ft_strlen.c \
 	   operations/reverse_rotate.c operations/rotate.c operations/swap_push.c \
-	   parse_err_handling/ft_arr_of_strjoin.c parse_err_handling/ft_atoi.c \
-	   parse_err_handling/ft_get_nums.c parse_err_handling/ft_isdigit.c \
-	   parse_err_handling/ft_memcpy.c parse_err_handling/ft_split.c \
-	   parse_err_handling/ft_strncmp.c
+	   parse_err_handling/ft_arr_of_strjoin.c parse_err_handling/ft_get_nums.c \
+	   utils/ft_atoi.c utils/ft_isdigit.c utils/ft_memcpy.c utils/ft_split.c \
+	   utils/ft_strncmp.c utils/ft_strdup.c
 
 OBJS = $(SRCS:.c=.o)
 

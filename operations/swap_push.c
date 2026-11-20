@@ -28,6 +28,8 @@ void	ss(t_stack *stack_a, t_stack *stack_b)
 {
 	int	temp;
 
+	if (stack_a->size < 2 && stack_b->size < 2)
+		return ;
 	if (stack_a->size >= 2)
 	{
 		temp = stack_a->data[indexer(stack_a, 0)];
@@ -40,8 +42,7 @@ void	ss(t_stack *stack_a, t_stack *stack_b)
 		stack_b->data[indexer(stack_b, 0)] = stack_b->data[indexer(stack_b, 1)];
 		stack_b->data[indexer(stack_b, 1)] = temp;
 	}
-	if (stack_a->size >= 2 || stack_b->size >= 2)
-		ft_printf(1, "ss\n");
+	ft_printf(1, "ss\n");
 }
 
 void	pa(t_stack *stack_a, t_stack *stack_b)

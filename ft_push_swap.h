@@ -42,6 +42,7 @@ char	**ft_split(char const *s, char c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_push_swap(int *nums, int size, t_strategy strategy, int bench);
 int		ft_atoi(const char *nptr);
+char	*ft_strdup(const char *s);
 int		*ft_get_nums(char **inputs, int start, int *size);
 int		ft_isdigit(int c);
 int		indexer(t_stack *stack_x, int i);
@@ -56,5 +57,6 @@ void	rr(t_stack *stack_a, t_stack *stack_b);
 void	rra(t_stack *stack_a);
 void	rrb(t_stack *stack_b);
 void	rrr(t_stack *stack_a, t_stack *stack_b);
+void	selection_sort(t_stack *stack_a, t_stack *stack_b);
 
 #endif
