@@ -14,7 +14,11 @@ SRCS = main.c ft_push_swap.c \
 	   operations/reverse_rotate.c operations/rotate.c operations/swap_push.c \
 	   parse_err_handling/ft_arr_of_strjoin.c parse_err_handling/ft_get_nums.c \
 	   utils/ft_atoi.c utils/ft_isdigit.c utils/ft_memcpy.c utils/ft_split.c \
-	   utils/ft_strncmp.c utils/ft_strdup.c
+	   utils/ft_strncmp.c \
+	   medium_strat/medium.c medium_strat/med_utils/temp_sort.c \
+	   adaptive_strat/adaptive.c \
+	   complex_strat/complex.c \
+	   simple_strat/simple.c \
 
 OBJS = $(SRCS:.c=.o)
 

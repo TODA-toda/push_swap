@@ -62,15 +62,19 @@ int	ft_push_swap(int *nums, int size, t_strategy strategy, int bench)
 	t_stack	stack_a;
 	t_stack	stack_b;
 	float	disorder;
-	void	(*strategies[4])(t_stack *, t_stack *, float);
+	int	(*strategies[4])(t_stack *, t_stack *, float);
 
-	(void)strategy;
 	(void)bench;
 	if (!initial_stacks(&stack_a, &stack_b, nums, size))
 		return (free_it(&stack_a, NULL, 0));
+	strategies[ADAPTIVE] = adaptive_sort;
+	strategies[SIMPLE] = selection_sort;
+	strategies[MEDIUM] = chunk_sort;
+	strategies[COMPLEX] = quick_sort;
 	disorder = calc_disorder(&stack_a);
 	if (disorder == 0.00f)
 		return (free_it(&stack_a, &stack_b, 1));
-
+	if (!strategies[strategy](&stack_a, &stack_b, disorder))
+		return (free_it(&stack_a, &stack_b, 0));
 	return (free_it(&stack_a, &stack_b, 1));
 }

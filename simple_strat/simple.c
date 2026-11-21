@@ -72,10 +72,11 @@ static void	sort_three(t_stack *stack_a)
 		ra(stack_a);
 }
 
-void	selection_sort(t_stack *stack_a, t_stack *stack_b)
+int	selection_sort(t_stack *stack_a, t_stack *stack_b, float disorder)
 {
 	int	min_index;
 
+	(void)disorder;
 	if (stack_a->size == 2)
 	{
 		sa(stack_a);
@@ -91,4 +92,5 @@ void	selection_sort(t_stack *stack_a, t_stack *stack_b)
 	sort_three(stack_a);
 	while (stack_b->size)
 		pa(stack_a, stack_b);
+	return (1);
 }
